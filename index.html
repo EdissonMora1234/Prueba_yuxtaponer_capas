@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryMap con Leyenda Dinámica y Superposición</title>
+    <link rel="stylesheet" href="lib/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-side-by-side/2.1.0/leaflet-side-by-side.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="map-container">
+            <!-- Botón para reiniciar el mapa -->
+            <div id="resetButton" class="control-button">Reiniciar Mapa</div>
+            <!-- Contenedor principal del mapa -->
+            <div id="map"></div>
+            <!-- Botón para volver al índice -->
+            <div id="backToIndexButton" class="control-button">Volver al Índice</div>
+            
+            <div id="slider-container">
+                <input type="range" id="layer-slider" min="0" max="1" step="0.01" value="0.5">
+            </div>
+
+            <!-- Leyenda dinámica -->
+            <div id="legend" class="panel">
+                <button id="toggle-legend" class="panel-toggle">Minimizar</button>
+                <div id="legend-content">
+                    <!-- Contenido generado dinámicamente -->
+                </div>
+            </div>
+
+            <!-- Panel de atributos -->
+            <div id="attributes-panel" class="panel minimized">
+                <div class="panel-header">
+                    <span>Atributos de la Capa</span>
+                    <button id="toggle-attributes" class="panel-toggle">Despliegue de atributos</button>
+                </div>
+                <div id="attributes-content">
+                    <!-- Tabla de atributos generada dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="lib/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-side-by-side/2.1.0/leaflet-side-by-side.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
